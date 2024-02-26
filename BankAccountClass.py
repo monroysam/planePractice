@@ -8,25 +8,32 @@ class BankAccount:
 # the __balance attribute.
 
     def __init__(self, bal):
-        self.balance = bal
+        self.__balance = bal
 
       # The deposit method makes a deposit into the
       # account.
 
     def deposit(self, amount):
-        self.balance += amount
+        self.__balance += amount
 
       # The withdraw method withdraws an amount
       # from the account.
 
     def withdraw(self, amount):
+        if amount > self.__balance:
+            print()
+            print('Invalid')
+            amount = input("Enter new withdraw ammount")
+        else:
+            self.__balance -= abs(amount)
+        
 
 
       # The get_balance method returns the
       # account balance.
 
     def get_balance(self):
-        return self.balance
+        return self.__balance
 
 
 
