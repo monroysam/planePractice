@@ -20,7 +20,7 @@ class BankAccount:
       # from the account.
 
     def withdraw(self, amount):
-        if amount > self.__balance:
+        if abs(amount) > self.__balance:
             print()
             print('Invalid')
             amount = input("Enter new withdraw ammount")
@@ -37,5 +37,4 @@ class BankAccount:
 
 
 
-    def __str__(self):
-        return 'The balance is $' + format(self.__balance, ',.2f')
+    v
